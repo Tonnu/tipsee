@@ -33,7 +33,7 @@
      *   Ensure to add the Bundle Identifier of your iOS app to your
      *   API Key's Application identifiers in the SumUp developer portal.
      */
-    [SumupSDK setupWithAPIKey:@"c5e0068f-b776-4fa3-9051-f6f448e1a66d"];
+    [SumupSDK setupWithAPIKey:@"3f76e7ae-b3ce-4847-9af9-e16a39cc7fa7"];
     return YES;
 }
 

@@ -241,13 +241,16 @@
 			attributes = {
 				CLASSPREFIX = SUS;
 				LastSwiftUpdateCheck = 0810;
-				LastUpgradeCheck = 0810;
+				LastUpgradeCheck = 0830;
 				ORGANIZATIONNAME = "SumUp Payments Limited";
 				TargetAttributes = {
 					1B584F171DE60F7100642029 = {
 						CreatedOnToolsVersion = 8.1;
 						LastSwiftMigration = 0810;
 						ProvisioningStyle = Automatic;
+					};
+					DC9610B018996359009D8EBC = {
+						DevelopmentTeam = 49S77L2FMG;
 					};
 				};
 			};
@@ -497,12 +500,13 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_WARN_NULLABLE_TO_NONNULL_CONVERSION = YES;
+				DEVELOPMENT_TEAM = 49S77L2FMG;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SumupSDKSampleApp/SrcObjC/SumupSDKSampleApp-Prefix.pch";
 				INFOPLIST_FILE = "SumupSDKSampleApp/SumupSDKSampleApp-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.sumup.sample-objc";
+				PRODUCT_BUNDLE_IDENTIFIER = "SomethingElse-tipsee";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUS_STORYBOARD_NAME = "Main-ObjC";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -516,12 +520,13 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_WARN_NULLABLE_TO_NONNULL_CONVERSION = YES;
+				DEVELOPMENT_TEAM = 49S77L2FMG;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SumupSDKSampleApp/SrcObjC/SumupSDKSampleApp-Prefix.pch";
 				INFOPLIST_FILE = "SumupSDKSampleApp/SumupSDKSampleApp-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.sumup.sample-objc";
+				PRODUCT_BUNDLE_IDENTIFIER = "SomethingElse-tipsee";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUS_STORYBOARD_NAME = "Main-ObjC";
 				TARGETED_DEVICE_FAMILY = "1,2";

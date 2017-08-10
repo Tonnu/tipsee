@@ -1,4 +1,4 @@
-//
+ //
 //  ViewController.swift
 //  SumupSDKSampleApp
 //
@@ -10,7 +10,7 @@ import UIKit
 
 class ViewController: UIViewController {
     private var appearCompleted = false
-
+c
     // MARK: - Storyboard Outlets
 
     @IBOutlet fileprivate weak var buttonLogin: UIButton?

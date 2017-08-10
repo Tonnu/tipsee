@@ -16,7 +16,12 @@
 @property (weak, nonatomic) IBOutlet UIButton *buttonLogin;
 @property (weak, nonatomic) IBOutlet UIButton *buttonLogout;
 @property (weak, nonatomic) IBOutlet UIButton *buttonCharge;
+@property (weak, nonatomic) IBOutlet UIButton *button2;
+@property (weak, nonatomic) IBOutlet UIButton *button3;
 @property (weak, nonatomic) IBOutlet UIButton *buttonPreferences;
+@property (weak, nonatomic) IBOutlet UILabel *rightTransform;
+@property (weak, nonatomic) IBOutlet UILabel *leftTransform;
+
 
 @property (weak, nonatomic) IBOutlet UILabel *label;
 @property (weak, nonatomic) IBOutlet UILabel *versionLabel;
@@ -30,6 +35,9 @@
     
     // on first appear present login
     if (!self.appeared) {
+        [_leftTransform setTransform: CGAffineTransformMakeRotation(-M_PI/4)];
+        [_rightTransform setTransform:CGAffineTransformMakeRotation(-M_PI/4)];
+        
         [self buttonLoginTapped:nil];
         [self setAppeared:YES];
     }
@@ -59,9 +67,22 @@
                                                 }];
 }
 
+/** charge buttons **/
 - (IBAction)buttonChargeTapped:(id)sender {
+    [self chargeAmount:@"1"];
+}
+
+- (IBAction)buttonCharge2Tapped:(id)sender {
+    [self chargeAmount:@"1.5"];
+}
+
+- (IBAction)buttonCharge3Tapped:(id)sender {
+    [self chargeAmount:@"2"];
+}
+
+- (void) chargeAmount:(NSString*)amount {
     // check total and currency code
-    NSString *total = [[self textFieldTotal] text];
+    NSString *total = amount;
     NSString *currencyCode = [[SumupSDK currentMerchant] currencyCode];
     
     if (([total doubleValue] <= 0) || ![currencyCode length]) {
@@ -70,7 +91,7 @@
     }
     
     SMPCheckoutRequest *request;
-
+    
     request = [SMPCheckoutRequest requestWithTotal:[NSDecimalNumber decimalNumberWithString:total]
                                              title:self.textFieldTitle.text
                                       currencyCode:currencyCode
@@ -134,6 +155,7 @@
 - (void)addCurrencyToTextField {
     UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 30, 30)];
     [label setFont:self.textFieldTotal.font];
+    
     SMPMerchant *merchant = [SumupSDK currentMerchant];
     [label setText:[merchant currencyCode]?:@"---"];
     [label sizeToFit];
